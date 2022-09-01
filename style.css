@@ -4,11 +4,18 @@
     box-sizing: border-box;
 }
 
+.theme-light: {
+    --font-color: black;
+}
+
 header nav {
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    background: gray;
+    background: #EEE;
+    font-family: sans-serif;
+    border-bottom: 2px solid black;
 }
 
 header nav ul {
@@ -17,15 +24,63 @@ header nav ul {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+header nav li {
+    padding: 1rem;
 }
 
 header nav a {
-    margin: 1rem;
     text-decoration: none;
+    color: var(--font-color)
 }
 
-header nav ul:first-child {
+header nav ul li:first-child {
+    font-size: 150%;
     font-variant: small-caps;
     margin-right: 10rem;
+}
+
+body {
+    background: #EEE;
+}
+
+main {
+    margin: 200px auto;
+    min-height: 100vh;
+    max-width: 80rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 400%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 1rem;
+    padding-top: 1em;
+}
+
+footer {
+    border-top: 2px solid black;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #EEE;
+}
+
+footer ul {
+    margin: 0 auto;
+    max-width: 70rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    padding: 1rem;
+    font-size: 80%;
+    font-family: monospace;
 }
