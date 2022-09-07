@@ -14,14 +14,14 @@ window.onload = function () {
 	    linkAlt: "Page Personnelle ISIMA"
 	},
 	{
-	    name: "Test d'une review",
-	    author: "Durel Enzo",
-	    date: "2022",
-	    img: "./img/Kakariko.jpg",
-	    alt: "Ceci est une image test",
-	    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed tellus tellus. Vivamus eget lacus blandit erat rhoncus pellentesque. Sed rutrum quam arcu, at laoreet diam aliquet eu. Aliquam a ultricies enim. Nam vel sagittis elit, a blandit lectus. Donec id ipsum id mi consequat vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut iaculis sodales lacus non faucibus. Curabitur tincidunt iaculis ipsum. Curabitur molestie nec tortor in varius. Fusce in massa elit. Pellentesque feugiat luctus elementum. Vivamus sed semper neque. Nunc aliquet dui nec nunc aliquam, at efficitur orci ultrices. Nulla sit amet turpis non nulla pretium varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed tellus tellus. Vivamus eget lacus blandit erat rhoncus pellentesque. Sed rutrum quam arcu, at laoreet diam aliquet eu. Aliquam a ultricies enim. Nam vel sagittis elit, a blandit lectus. Donec id ipsum id mi consequat vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut iaculis sodales lacus non faucibus. Curabitur tincidunt iaculis ipsum. Curabitur molestie nec tortor in varius. Fusce in massa elit. Pellentesque feugiat luctus elementum. Vivamus sed semper neque. Nunc aliquet dui nec nunc aliquam, at efficitur orci ultrices. Nulla sit amet turpis non nulla pretium varius.",
+	    name: "2048 en C",
+	    author: "Durel Enzo, Villepreux Thibault",
+	    date: "2021",
+	    img: "./img/projet2048_bgHD.png",
+	    alt: "Interface de jeu du 2048",
+	    text: "Développement du jeu 2048 par le biais d'un projet scolaire. Développé sous la librairie graphique SDL1.2 (par contrainte). La grille de jeu a été conçu sous le concept de TileMapping concept très développé dans les années 80 dans les jeux 2D et dans le rétro-gaming. Création, par moi-même, du fond-d'écran et conception, toujours par moi-même, de la musique.",
 	    link: "",
-	    linkAlt: "test-lien"
+	    linkAlt: "Téléchargement"
 	}
     ];
 
