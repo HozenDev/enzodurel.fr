@@ -17,7 +17,7 @@ window.onload = function () {
 	    name: "2048 en C",
 	    author: "Durel Enzo, Villepreux Thibault",
 	    date: "2021",
-	    img: "./img/projet2048_bgHD.png",
+	    img: "./img/2048.png",
 	    alt: "Interface de jeu du 2048",
 	    text: "Développement du jeu 2048 par le biais d'un projet scolaire. Développé sous la librairie graphique SDL1.2 (par contrainte). La grille de jeu a été conçu sous le concept de TileMapping concept très développé dans les années 80 dans les jeux 2D et dans le rétro-gaming. Création, par moi-même, du fond-d'écran et conception, toujours par moi-même, de la musique.",
 	    link: "",
