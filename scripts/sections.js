@@ -6,7 +6,7 @@ window.onload = function () {
 	{
 	    name: "La fourmi de Langton",
 	    author: "Durel Enzo, Mallepeyre Nourrane, Barra Vincent",
-	    date: "2021",
+	    date: "2022",
 	    img: "./img/fourmi.png",
 	    alt: "Comportement de plusieurs fourmis de Langton avec le comportement LLR",
 	    text: "Création d'un logiciel de simulation de la fourmi de Langton qui est une machine de Turing universelle bidimensionnelle constituée d'un ensemble de règles simples mais dont le comportement émergent est complexe. Logiciel développé sous Python 3 et avec la librarie graphique PyGame basée sur la SDL2. Plusieurs concepts ont été introduits dans ce travail notamment avec une approche du multiprocessing et un développement en paradigme objet qui se rapproche de la conception des vies émergentes d'après l'article écrit par le professeur Langton: <a href=\"https://www.semanticscholar.org/paper/Studying-artificial-life-with-cellular-automata-Langton/c52b8873de752b88da3d4f94b4060ec2a7d96377\"> Studying artificial life with cellular automata. </a>",
@@ -19,12 +19,15 @@ window.onload = function () {
 	    date: "2021",
 	    img: "./img/2048.png",
 	    alt: "Interface de jeu du 2048",
-	    text: "Développement du jeu 2048 par le biais d'un projet scolaire. Développé sous la librairie graphique SDL1.2 (par contrainte). La grille de jeu a été conçu sous le concept de TileMapping concept très développé dans les années 80 dans les jeux 2D et dans le rétro-gaming. Création, par moi-même, du fond-d'écran et conception, toujours par moi-même, de la musique.",
+	    text: "Développement du jeu 2048 par le biais d'un projet scolaire. Développé sous la librairie graphique SDL1.2 (par contrainte). La grille de jeu a été conçue avec le concept de TileMappingqui était un concept très développé dans les années 80 dans les jeux 2D et dans le rétro-gaming. Création, par moi-même, du fond-d'écran et conception, toujours par moi-même, de la musique.",
 	    link: "",
 	    linkAlt: "Téléchargement"
 	}
     ];
 
+    reviews.sort(function compare(a, b) {
+	return parseInt(a.date) - parseInt(b.date);
+    });
 
     (function() {
 	for (review of reviews) {
