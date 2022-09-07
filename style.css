@@ -229,6 +229,8 @@ footer ul li {
     height: 100vh;
     z-index: 3000;
     background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
 }
 
 .widget > img {
