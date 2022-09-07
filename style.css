@@ -81,6 +81,10 @@ main section:nth-child(2n) {
     border-left: none;
 }
 
+main section > img:hover {
+    cursor: pointer;
+}
+
 main section > img {
     width: 300px;
     height: 300px;
