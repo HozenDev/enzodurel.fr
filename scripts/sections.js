@@ -26,7 +26,7 @@ window.onload = function () {
     ];
 
     reviews.sort(function compare(a, b) {
-	return parseInt(a.date) - parseInt(b.date);
+	return parseInt(b.date) - parseInt(a.date);
     });
 
     (function() {
