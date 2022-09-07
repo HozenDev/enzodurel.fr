@@ -217,3 +217,23 @@ footer ul li {
     font-size: 80%;
     font-family: monospace;
 }
+
+/* widget style */
+
+.widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3000;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.widget > img {
+    position: relative;
+    border: 2px solid white;
+    max-width: 80%;
+    max-height: 80%;
+}
