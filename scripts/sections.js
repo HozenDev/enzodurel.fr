@@ -7,8 +7,20 @@ window.onload = function () {
 	    name: "La fourmi de Langton",
 	    author: "Durel Enzo, Mallepeyre Nourrane, Barra Vincent",
 	    date: "2022",
-	    img: "./img/fourmi.png",
-	    alt: "Comportement de plusieurs fourmis de Langton avec le comportement LLR",
+	    img: [
+		{
+		    src: "img/fourmi.png",
+		    alt: "Comportement de plusieurs fourmis de Langton avec le comportement LLR"
+		},
+		{
+		    src: "img/fourmi_square.png",
+		    alt: "Fourmi qui forme un carré par son comportement"
+		},
+		{
+		    src: "img/fourmi_triangle.png",
+		    alt: "Fourmi qui forme un triangle par son comportement"
+		}
+	    ],
 	    text: "Création d'un logiciel de simulation de la fourmi de Langton qui est une machine de Turing universelle bidimensionnelle constituée d'un ensemble de règles simples mais dont le comportement émergent est complexe. Logiciel développé sous Python 3 et avec la librarie graphique PyGame basée sur la SDL2. Plusieurs concepts ont été introduits dans ce travail notamment avec une approche du multiprocessing et un développement en paradigme objet qui se rapproche de la conception des vies émergentes d'après l'article écrit par le professeur Langton: <a href=\"https://www.semanticscholar.org/paper/Studying-artificial-life-with-cellular-automata-Langton/c52b8873de752b88da3d4f94b4060ec2a7d96377\"> Studying artificial life with cellular automata. </a>",
 	    link: "https://perso.isima.fr/~endurel",
 	    linkAlt: "Page Personnelle ISIMA"
@@ -17,8 +29,24 @@ window.onload = function () {
 	    name: "Jeu du 2048",
 	    author: "Durel Enzo, Villepreux Thibault",
 	    date: "2021",
-	    img: "./img/2048.png",
-	    alt: "Interface de jeu du 2048",
+	    img: [
+		{
+		    src: "img/2048_interface.png",
+		    alt: "Interface de jeu du 2048"
+		},
+		{
+		    src: "img/2048_grille.png",
+		    alt: "Grille de jeu du 2048"
+		},
+		{
+		    src: "img/2048_ctrl.png",
+		    alt: "Contrôles du jeu du 2048"
+		},
+		{
+		    src: "img/2048_homme.png",
+		    alt: "Fond d'écran du jeu du 2048"
+		}
+	    ],
 	    text: "Développement du jeu '2048' par le biais d'un projet scolaire. Développé en langage C sous la librairie graphique SDL1.2. La grille de jeu a été conçue avec le concept de tuiles (TileMapping) qui était très développé dans les années 80 pour les jeux 2D. En dehors de la programmation, le projet a permi une liberté dans la direction artistique et de ce faite dans la création, par moi-même, du fond-d'écran et de la conception, réalisation de la musique.",
 	    link: "",
 	    linkAlt: "Téléchargement"
@@ -52,10 +80,6 @@ window.onload = function () {
 	    const date = document.createElement("p");
 	    date.classList.add("article-date");
 	    date.innerHTML = review.date;
-	    
-	    const img = document.createElement("img");
-	    img.src = review.img;
-	    img.alt = review.alt;
 
 	    const description = document.createElement("p");
 	    description.classList.add("article-description");
@@ -67,12 +91,79 @@ window.onload = function () {
 	    if (review.link !== "") {
 		article.appendChild(link);
 	    }
-	    
+
 	    section.appendChild(title);
 	    section.appendChild(article);
-	    section.appendChild(img);
+
+	    const imgContainer = document.createElement("div");
+	    imgContainer.classList.add("imgContainer");
+	    
+	    for (image of review.img) {
+		const img = document.createElement("img");
+		img.src = image.src;
+		img.alt = image.alt;
+		imgContainer.appendChild(img);
+	    }
+
+	    section.appendChild(imgContainer);
 	    
 	    main.appendChild(section);
 	}
     })();
+
+    for (section of document.getElementsByTagName("section")) {
+	
+	section.addEventListener('mouseenter', function () {
+	    /* console.log(this.getElementsByTagName("img")[0]); */
+	    const imgIvl = setInterval(imageTransition, 3000, this.getElementsByClassName("imgContainer")[0]);
+	    this.addEventListener('mouseleave', function () {
+		clearInterval(imgIvl);
+	    });
+	});
+    }
+
+    function fadeIn(el) {
+	el.style.opacity = 0;
+	var tick = function () {
+            el.style.opacity = +el.style.opacity + 0.05;
+            if (+el.style.opacity < 1) {
+		var x =  (window.requestAnimationFrame &&
+			  requestAnimationFrame(tick)) ||
+			 setTimeout(tick, 16)
+            }
+	};
+	tick();
+    }
+    
+    function imageTransition(imgContainer) {
+	if (imgContainer.length < 2) return;
+	let images = imgContainer.getElementsByTagName("img");
+
+	fadeIn(images[0]);
+	imgContainer.appendChild(imgContainer.firstChild);
+	images[0].style.opacity = 1;
+    }
+    
+    
+    /* setInterval(changeImg, 10000); */
+
+    function changeImg() {
+	let images = document.getElementsByTagName("img");
+	let next = 0;
+	
+	for (let i=0; i<images.length; i++) {
+
+	    if (reviews[i].img.length < 2) break;
+
+	    for (let j=0; j<reviews[i].img.length; j++) {
+		if (images[i].src.includes(reviews[i].img[j].src)) {
+		    next = (j+1)%reviews[i].img.length;
+		    /* console.log(j, next, true); */
+		    break;
+		}
+	    }
+	    
+	    images[i].src = reviews[i].img[next].src;
+	}
+    }
 }
