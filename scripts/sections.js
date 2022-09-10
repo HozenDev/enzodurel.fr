@@ -14,12 +14,12 @@ window.onload = function () {
 	    linkAlt: "Page Personnelle ISIMA"
 	},
 	{
-	    name: "2048 en C",
+	    name: "Jeu du 2048",
 	    author: "Durel Enzo, Villepreux Thibault",
 	    date: "2021",
 	    img: "./img/2048.png",
 	    alt: "Interface de jeu du 2048",
-	    text: "Développement du jeu 2048 par le biais d'un projet scolaire. Développé sous la librairie graphique SDL1.2 (par contrainte). La grille de jeu a été conçue avec le concept de TileMappingqui était un concept très développé dans les années 80 dans les jeux 2D et dans le rétro-gaming. Création, par moi-même, du fond-d'écran et conception, toujours par moi-même, de la musique.",
+	    text: "Développement du jeu '2048' par le biais d'un projet scolaire. Développé en langage C sous la librairie graphique SDL1.2. La grille de jeu a été conçue avec le concept de tuiles (TileMapping) qui était très développé dans les années 80 pour les jeux 2D. En dehors de la programmation, le projet a permi une liberté dans la direction artistique et de ce faite dans la création, par moi-même, du fond-d'écran et de la conception, réalisation de la musique.",
 	    link: "",
 	    linkAlt: "Téléchargement"
 	}
