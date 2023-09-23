@@ -3,6 +3,42 @@ window.onload = function () {
     const main = document.getElementsByTagName("main")[0];
 
     const reviews = [
+        {
+            name: "Bibliothèque de style pour Org-mode",
+	    author: "Durel Enzo",
+	    date: "2022",
+	    img: [
+		{
+		    src: "img/theme_dark.png",
+		    alt: "Exemple d'une page exportée avec le theme sombre"
+		},
+		{
+		    src: "img/theme_light.png",
+		    alt: "Exemple d'une page exportée avec le theme clair"
+		}
+	    ],
+	    text: "Conception d'une bibliothèque de style pour l'exportation d'un document org-mode en HTML et LaTeX. Le but de ce projet est de créer une bibliothèque de style hébergé donc accessible à quiconque avec de la connexion internet qui permet d'exporter un document org-mode en HTML ou LaTeX avec un style personnalisé. Le projet est développé en CSS, en HTML, en JavaScript et en LaTeX.",
+	    link: "https://github.com/HozenDev/hozen-style",
+	    linkAlt: "Page Github"
+        },
+        {
+            name: "Simulation de Robotique en essaim",
+	    author: "Durel Enzo, Leroy Louis, Villepreux Thibault",
+	    date: "2023",
+	    img: [
+		{
+		    src: "img/simulation_ingame.png",
+		    alt: "Interface de la simulation lorsqu'elle est en cours"
+		},
+		{
+		    src: "img/simulation_stop.png",
+		    alt: "Interface de la simulation lorsqu'elle est en pause"
+		}
+	    ],
+	    text: "Création d'un logiciel de simulation de robotique en essaim. Le but de ce projet est de simuler le comportement d'un essaim de robots qui doivent se déplacer dans un environnement en cherchant une cible. Les robots sont autonomes et doivent communiquer entre eux pour trouver la cible. Le projet est développé en C avec la librairie graphique SDL2. L'apprentissage des robots est réalisé par un apprentissage par renforcement. Plusieurs algorithmes d'optimisation sont utilisés pour l'apprentissage des robots comme l'algorithme génétique, l'algorithme de colonie de fourmis ou encore l'algorithmes recuit simulé. Le projet est réalisé dans le cadre d'un projet de fin de la première année à l'ISIMA.",
+	    link: "https://github.com/HozenDev/zz1_apprentissage",
+	    linkAlt: "Page Github"
+        },
 	{
 	    name: "La fourmi de Langton",
 	    author: "Durel Enzo, Mallepeyre Nourrane, Barra Vincent",
@@ -22,8 +58,8 @@ window.onload = function () {
 		}
 	    ],
 	    text: "Création d'un logiciel de simulation de la fourmi de Langton qui est une machine de Turing universelle bidimensionnelle constituée d'un ensemble de règles simples mais dont le comportement émergent est complexe. Logiciel développé sous Python 3 et avec la librarie graphique PyGame basée sur la SDL2. Plusieurs concepts ont été introduits dans ce travail notamment avec une approche du multiprocessing et un développement en paradigme objet qui se rapproche de la conception des vies émergentes d'après l'article écrit par le professeur Langton: <a href=\"https://www.semanticscholar.org/paper/Studying-artificial-life-with-cellular-automata-Langton/c52b8873de752b88da3d4f94b4060ec2a7d96377\"> Studying artificial life with cellular automata. </a>",
-	    link: "https://perso.isima.fr/~endurel",
-	    linkAlt: "Page Personnelle ISIMA"
+	    link: "",
+	    linkAlt: ""
 	},
 	{
 	    name: "Jeu du 2048",
@@ -49,7 +85,7 @@ window.onload = function () {
 	    ],
 	    text: "Développement du jeu '2048' par le biais d'un projet scolaire. Développé en langage C sous la librairie graphique SDL1.2. La grille de jeu a été conçue avec le concept de tuiles (TileMapping) qui était très développé dans les années 80 pour les jeux 2D. En dehors de la programmation, le projet a permi une liberté dans la direction artistique et de ce faite dans la création, par moi-même, du fond-d'écran et de la conception, réalisation de la musique.",
 	    link: "",
-	    linkAlt: "Téléchargement"
+	    linkAlt: ""
 	}
     ];
 
