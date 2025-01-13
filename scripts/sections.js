@@ -13,7 +13,7 @@ window.onload = function () {
                     alt: "Processus du traitement du suivi"
                 },
                 {
-                    src: "img/nicla_plan.png"
+                    src: "img/nicla_plan.png",
                     alt: "Schéma de la carte Nicla Vision"
                 }
             ],
