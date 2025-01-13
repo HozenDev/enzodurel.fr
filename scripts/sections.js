@@ -4,6 +4,24 @@ window.onload = function () {
 
     const reviews = [
         {
+            name: "Suivi d'humain par caméra en temps réel",
+            author: "Durel Enzo, Laurençot Mathieu",
+            date: "2024",
+            img: [
+                {
+                    src: "img/tracking_example.png",
+                    alt: "Processus du traitement du suivi"
+                },
+                {
+                    src: "img/nicla_plan.png"
+                    alt: "Schéma de la carte Nicla Vision"
+                }
+            ]
+            text: "Développement d'une solution logicielle de suivi d'un cadis de golf et de son propriétaire. Déploiment d'un modèle d'intelligence artificielle de reconnaissance d'un humain sur un terrain de golf et de sa localisation dans l'image. Le modèle a été développée sur Nicla Vision et consomme 500 kB de mémoire vive. Développement d'une logique de suivi en fonction de la détection du modèle. Développement de l'interface de communication bluetooth entre la puce et le cadis de golf pour le déplacement de ce dernier (actionnage de ses roues)."
+            link: "https://github.com/mordroreur/ProjetCamera"
+            linkAlt: "Page Github"
+        },
+        {
             name: "Bibliothèque de style pour Org-mode",
 	    author: "Durel Enzo",
 	    date: "2022",
