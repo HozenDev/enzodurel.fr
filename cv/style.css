@@ -1,0 +1,39 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.theme-light {
+    --font-color: black;
+}
+
+body {
+    background: #243954;
+}
+
+main {
+    margin: 200px auto;
+    min-height: 100vh;
+    max-width: 90rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 400%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: .5rem;
+    padding: 1em 0;
+    margin-bottom: 5rem;
+    color: white;
+}
+
+/* resume */
+
+#resume {
+    padding-top: 2rem;
+}

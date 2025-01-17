@@ -1,0 +1,21 @@
+footer {
+    border-top: 2px solid black;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #EEE;
+}
+
+footer ul {
+    margin: 0 auto;
+    max-width: 90rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    padding: 1rem;
+    font-size: 80%;
+    font-family: monospace;
+}
